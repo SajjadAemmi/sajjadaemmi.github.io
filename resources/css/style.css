@@ -1,10 +1,24 @@
 body {
-    background: url('../images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
     height: 100%;
     text-align: center;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
+}
+
+.lm-animated-bg{
+    background-image: url("../images/background.jpg"); 
+    background-position: calc(50% + -4.74846px) calc(50% + -1.5465px);    
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: -28px;
+    left: -28px;
+    right: -28px;
+    bottom: -28px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -152,6 +166,10 @@ body {
 
 .fa-instagram:hover {
     background-color: #c13584;
+}
+
+.fa-music:hover {
+    background-color: #f50;
 }
 
 #circle a, #circle a:hover {
