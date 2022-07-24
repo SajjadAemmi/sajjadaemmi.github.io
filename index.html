@@ -11,8 +11,7 @@
     <meta name="publisher" content="Sajjad Aemmi">
     <meta name="copyright" content="Sajjad Aemmi">
     <meta name="description" content="Sajjad Aemmi, Machine Learning Engineer">
-    <meta name="keywords"
-        content="Sajjad, Aemmi, MBition, Machine Learning, Engineer, ParsTech, Ferdowsi University, Mashhad, Iran">
+    <meta name="keywords" content="Sajjad, Aemmi, MBition, Machine Learning, Engineer, ParsTech, Ferdowsi University, Mashhad, Iran">
     <meta name="robots" content="index, follow">
     <meta name="DC.Creator" content="Sajjad Aemmi">
     <meta name="DC.Publisher" content="Sajjad Aemmi">
@@ -152,19 +151,14 @@
             $('.popoverData').popover();
         });
 
-        $(document).ready(function () 
-        { 
+        $(document).ready(function () { 
             var o = 20, i = o / $(document).height(), n = o / $(document).width(); 
-
-            $("body").on("mousemove", function (a) 
-            { 
+            $("body").on("mousemove", function (a) { 
                 var t = a.pageX - $(document).width() / 2, o = a.pageY - $(document).height() / 2, s = n * t * -1, m = i * o * -1, c = $(".lm-animated-bg"); 
                 c.addClass("transition"), c.css({ "background-position": "calc( 50% + " + s + "px ) calc( 50% + " + m + "px )" }), 
                 setTimeout(function () { c.removeClass("transition") }, 300) 
             });
-        });
 
-        $(function () {
             function distributeFields() {
                 const radius = ($('#avatar').height() / 2) + 50;
                 let fields = $('.btn'), container = $('#circle'),
@@ -180,11 +174,8 @@
                     angle += step;
                 });
             }
-
             distributeFields();
         });
-        
     </script>
 </body>
-
 </html>
