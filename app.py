@@ -1,8 +1,14 @@
-# save this as app.py
 from flask import Flask, render_template, request
+from flask_mysqldb import MySQL
+
 
 app = Flask(__name__)
-
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'sajjadaemmi'
+ 
+mysql = MySQL(app)
 
 @app.route("/")
 def root():
@@ -34,15 +40,28 @@ def me_api():
     }
 
 
-@app.route('/login', methods=['POST', 'GET'])
+@app.route('/form')
+def form():
+    return render_template('form.html')
+
+
+@app.route('/login', methods = ['POST', 'GET'])
 def login():
-    error = None
+    if request.method == 'GET':
+        return render_template('login.html')
+     
     if request.method == 'POST':
-        if valid_login(request.form['username'],
-                       request.form['password']):
-            return log_the_user_in(request.form['username'])
+        email = request.form['email']
+        password = request.form['password']
+        cursor = mysql.connection.cursor()
+        cursor.execute(f"SELECT * FROM users WHERE email='{email}' AND password='{password}'")
+        result = cursor.fetchall()
+        cursor.close()
+        if len(result) == 1:
+            return f"Done!!"
         else:
-            error = 'Invalid username/password'
-    # the code below is executed if the request method
-    # was GET or the credentials were invalid
-    return render_template('login.html', error=error)
+            return f"Besco!!"
+
+
+if __name__ == '__main__':
+    app.run(host='localhost', port=5000, debug=True, use_reloader=True, threaded=True)
