@@ -1,5 +1,5 @@
-database_host = "localhost"
+database_host = "sajjadaemmi-db"
 database_user = "root"
-database_password = ""
-database_name = "sajjadaemmi"
+database_password = "jGwFIkj9yvper3sEyAQy7ooG"
+database_name = "thirsty_dirac"
 upload_folder = "./static/"
