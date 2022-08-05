@@ -1,5 +1,0 @@
-database_host = "localhost"
-database_user = "root"
-database_password = ""
-database_name = "sajjadaemmi"
-upload_folder = "./static/"
