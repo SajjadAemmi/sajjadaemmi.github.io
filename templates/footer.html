@@ -1,35 +1,11 @@
-    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.10.2.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $(window).load(function () {
-            $('.popoverData').popover();
-        });
-
-        $(document).ready(function () { 
-            var o = 20, i = o / $(document).height(), n = o / $(document).width(); 
-            $("body").on("mousemove", function (a) { 
-                var t = a.pageX - $(document).width() / 2, o = a.pageY - $(document).height() / 2, s = n * t * -1, m = i * o * -1, c = $(".lm-animated-bg"); 
-                c.addClass("transition"), c.css({ "background-position": "calc( 50% + " + s + "px ) calc( 50% + " + m + "px )" }), 
-                setTimeout(function () { c.removeClass("transition") }, 300) 
-            });
-
-            function distributeFields() {
-                const radius = ($('#avatar').height() / 2) + 50;
-                let fields = $('.btn'), container = $('#circle'),
-                    width = container.width(), height = container.height(),
-                    step = (2 * Math.PI) / fields.length, angle = 90 + step * 2.5;
-                fields.each(function () {
-                    const x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).width() / 2);
-                    const y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).height() / 2);
-                    $(this).css({
-                        left: x + 'px',
-                        top: y + 'px'
-                    });
-                    angle += step;
-                });
-            }
-            distributeFields();
-        });
-    </script>
-  </body>
-</html>
+<footer class="text-white p-2 text-center">
+    <p dir="ltr" class="mb-1">
+        <small>
+            CopyRight &copy; {{ now.year }} | Sajjad Aemmi
+            <br>
+            Made with <i class="fa-brands fa-python"></i> , 
+            <i class="fa-duotone fa-heart"></i> 
+            and lots of <i class="fa-duotone fa-coffee"></i>
+        </small>
+    </p>
+</footer>

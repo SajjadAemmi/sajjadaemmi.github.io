@@ -1,0 +1,27 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mt-5">
+        <h2 class="text-white mb-4">
+            <i class="fa-duotone fa-blog fa-fw"></i>
+            Blog
+        </h2>
+        {% for post in posts %}
+        <div class="col-lg-3 col-12 mb-4">
+            <a href="/blog/{{ post.id }}">
+                <div class="card border-0 shadow bg-body rounded rounded-4 hover">
+                    <img src="{{ post.image }}" class="card-img rounded rounded-4" alt="{{ post.title }}">
+                    <div class="card-img-overlay text-white rounded rounded-4">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.time }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
