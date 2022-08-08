@@ -6,7 +6,7 @@
     <i class="fa-solid fa-plus"></i>
 </a>
 
-<h2>Posts</h2>
+<h2>Blog</h2>
 
 <table class="table table-striped">
     <tr>
@@ -21,7 +21,7 @@
         <td>{{ post.id }}</td>
         <td>{{ post.title }}</td>
         <td>{{ post.body | truncate(64, True) | safe }}</td>
-        <td>{{ post.time }}</td>
+        <td>{{ post.create_time }}</td>
         <td>
             <a href="#" class="btn btn-info btn-sm rounded-circle">
                 <i class="fa-duotone fa-pen"></i>

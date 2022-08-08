@@ -1,24 +1,7 @@
 body {
-    height: 100%;
+    /* height: 100%; */
     text-align: center;
     /* overflow: hidden; */
-}
-
-.lm-animated-bg{
-    background-image: url("../images/background.jpg"); 
-    background-position: calc(50% + -4.74846px) calc(50% + -1.5465px);    
-    position: fixed;
-    width: auto;
-    height: auto;
-    top: -28px;
-    left: -28px;
-    right: -28px;
-    bottom: -28px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-    overflow: hidden;
 }
 
 ::-webkit-scrollbar {

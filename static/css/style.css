@@ -1,12 +1,12 @@
 body {
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .lm-animated-bg {
     background-image: url("../images/background.jpg");
     background-position: calc(50% + -4.74846px) calc(50% + -1.5465px);
-    position: absolute;
+    position: fixed;
     width: auto;
     height: auto;
     top: -28px;
@@ -51,12 +51,4 @@ body {
 .post-body {
     text-align: justify;
     text-justify: inter-word;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
-    height: 66px;
 }
