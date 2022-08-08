@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 from flask import Flask, render_template, request, redirect
-from flask_mysqldb import MySQL, cursors
+from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import UserMixin, LoginManager, login_required, current_user, login_user, logout_user
 import config
@@ -9,19 +9,21 @@ import config
 
 app = Flask(__name__)
 app.secret_key = 'super secret string' 
-app.config['MYSQL_HOST'] = config.database_host
-app.config['MYSQL_USER'] = config.database_user
-app.config['MYSQL_PASSWORD'] = config.database_password
-app.config['MYSQL_DB'] = config.database_name
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
 app.config['UPLOAD_FOLDER'] = config.upload_folder
- 
-mysql = MySQL(app)
+
+db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 
 
-class User(UserMixin):
-    pass
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<User %r>' % self.username
 
 
 @login_manager.user_loader
@@ -68,19 +70,13 @@ def me_api():
 
 @app.route('/blog')
 def blog():
-    cursor = mysql.connection.cursor(cursors.DictCursor)
-    cursor.execute(f"SELECT * FROM posts")
-    posts = cursor.fetchall()
-    cursor.close()
+    posts = db.session.execute(f"SELECT * FROM posts").mappings().all()
     return render_template('blog.html', posts=posts)
 
 
 @app.route('/blog/<post_id>')
 def blog_post(post_id):
-    cursor = mysql.connection.cursor(cursors.DictCursor)
-    cursor.execute(f"SELECT * FROM posts WHERE id={post_id}")
-    post = cursor.fetchone()
-    cursor.close()
+    post = db.session.execute(f"SELECT * FROM posts WHERE id={post_id}").fetchone()
     return render_template('blog_post.html', post=post)
 
 
@@ -92,18 +88,14 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        # password = bcrypt.generate_password_hash(password)
-        cursor = mysql.connection.cursor()
-        cursor.execute(f"SELECT * FROM users WHERE email='{email}' AND password='{password}'")
-        result = cursor.fetchall()
-        cursor.close()
-        if len(result) == 1:
+        result = db.session.execute(f"SELECT * FROM users WHERE email='{email}'").fetchone()
+        if result is not None and bcrypt.check_password_hash(result["password"], password):
             user = User()
             user.id = email
             login_user(user)
             return redirect("/admin/dashboard")
         else:
-            return f"Besco!!"
+            return redirect("/admin/login")
 
 
 @app.route("/admin/logout")
@@ -122,10 +114,7 @@ def admin_dashboard():
 @app.route('/admin/blog')
 @login_required
 def admin_blog():
-    cursor = mysql.connection.cursor(cursors.DictCursor)
-    cursor.execute(f"SELECT * FROM posts")
-    posts = cursor.fetchall()
-    cursor.close()
+    posts = db.session.execute(f"SELECT * FROM posts").mappings().all()
     return render_template('admin/blog.html', posts=posts)
 
 
@@ -145,10 +134,8 @@ def admin_blog_add():
         
         title = request.form['title']
         body = request.form['body']
-        cursor = mysql.connection.cursor()
-        cursor.execute(f"INSERT INTO posts(title, body, image) VALUES('{title}', '{body}', '{image_path}')")
-        mysql.connection.commit()
-        cursor.close()
+        db.session.execute(f"INSERT INTO posts(title, body, image) VALUES('{title}', '{body}', '{image_path}')")
+        db.session.commit()
         return redirect("/admin/blog")
 
 

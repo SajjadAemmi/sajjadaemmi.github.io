@@ -1,4 +1,4 @@
 flask
-flask_mysqldb
+flask-sqlalchemy
 flask_bcrypt
 flask-login
