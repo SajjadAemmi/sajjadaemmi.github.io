@@ -70,7 +70,7 @@ def me_api():
 
 @app.route('/blog')
 def blog():
-    posts = db.session.execute(f"SELECT * FROM posts").mappings().all()
+    posts = db.session.execute(f"SELECT * FROM posts ORDER BY create_time DESC").mappings().all()
     return render_template('blog.html', posts=posts)
 
 
@@ -114,7 +114,7 @@ def admin_dashboard():
 @app.route('/admin/blog')
 @login_required
 def admin_blog():
-    posts = db.session.execute(f"SELECT * FROM posts").mappings().all()
+    posts = db.session.execute(f"SELECT * FROM posts ORDER BY create_time DESC").mappings().all()
     return render_template('admin/blog.html', posts=posts)
 
 
@@ -134,7 +134,24 @@ def admin_blog_add():
         
         title = request.form['title']
         body = request.form['body']
+        body = body.replace("'","''")
         db.session.execute(f"INSERT INTO posts(title, body, image) VALUES('{title}', '{body}', '{image_path}')")
+        db.session.commit()
+        return redirect("/admin/blog")
+
+
+@app.route('/admin/blog/edit/<post_id>', methods=['POST', 'GET'])
+@login_required
+def admin_blog_edit(post_id):
+    if request.method == 'GET':
+        post = db.session.execute(f"SELECT * FROM posts WHERE id={post_id}").fetchone()
+        return render_template('admin/edit_post.html', post=post)
+    
+    if request.method == 'POST':
+        title = request.form['title']
+        body = request.form['body']
+        body = body.replace("'","''")
+        db.session.execute(f"UPDATE posts SET title='{title}', body='{body}' WHERE id={post_id}")
         db.session.commit()
         return redirect("/admin/blog")
 

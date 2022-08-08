@@ -33,7 +33,7 @@ body {
 }
 
 .card-img-overlay {
-    background: linear-gradient(to bottom, transparent 0%, black 100%);
+    background: linear-gradient(to top, transparent 0%, black 150%);
 }
 
 .hover {
