@@ -16,6 +16,25 @@
     <meta name="keywords"
         content="Sajjad, Aemmi, MBition, Machine Learning, Engineer, ParsTech, Ferdowsi University, Mashhad, Iran">
     <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="self.title() | Sajjad Aemmi"/>
+    <meta property="og:url" content="{{ url_for(request.endpoint) }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Sajjad Aemmi"/>
+    <meta property="og:description" content="@yield('description', $description)"/>
+    <meta property="og:image" content="{{ url_for('static', filename='images/avatar.jpg') }}"/>
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/avatar.jpg') }}">
+    <meta name="theme-color" content="#fb3449">
+    <meta name="msapplication-navbutton-color" content="#1d442c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1d442c">
+
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/avatar.jpg') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='images/avatar.jpg') }}"/>
+    <link rel="icon" href="{{ url_for('static', filename='images/avatar.ico') }}">
+    <link rel='shortcut icon' type='image/x-icon' href="{{ url_for('static', filename='images/avatar.ico') }}">
+
     <meta name="DC.Creator" content="Sajjad Aemmi">
     <meta name="DC.Publisher" content="Sajjad Aemmi">
     <meta name="DC.Rights" content="Sajjad Aemmi">
@@ -58,6 +77,8 @@
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/typed.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 

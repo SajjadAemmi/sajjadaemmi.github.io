@@ -1,7 +1,8 @@
 {% extends 'template.html' %}
 
-{% block content %}
+{% block title %} {% block dashboard_title %} {% endblock %} | Admin {% endblock %}
 
+{% block content %}
 <div class="container px-4">
     <div class="row">
         <div class="col-lg-3 col-12 mb-4">
@@ -16,5 +17,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

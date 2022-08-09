@@ -45,16 +45,14 @@ body {
 }
 
 #content_name {
-    color: #fff;
     font-size: 40px;
-    font-weight: normal;
-    padding-top: 2.5em;
 }
 
 #content_description {
-    padding-top: 0.5em;
+    padding-top: 4em;
     font-size: 1.2em;
     color: #fff;
+    /* text-shadow: 1px 1px 4px #080808; */
 }
 
 #content_description a {

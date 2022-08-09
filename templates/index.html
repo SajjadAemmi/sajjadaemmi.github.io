@@ -1,5 +1,7 @@
 {% extends 'template.html' %}
 
+{% block title %} Home {% endblock %}
+
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
 <div id="content">
@@ -11,13 +13,13 @@
             data-bs-placement="left" target="_blank" data-bs-toggle="tooltip">
             <i class="fa-brands fa-instagram icon"></i>
         </a>
-        <a href="/blog" class="btn popoverData" data-bs-title="my blog" data-bs-placement="left" target="_blank"
+        <a href="/blog" class="btn popoverData" data-bs-title="my blog" data-bs-placement="left" target="_self"
             data-bs-toggle="tooltip">
             <i class="fa-duotone fa-blog icon"></i>
         </a>
         <a href="https://resume.io/r/OAD7FPexF" class="btn popoverData" data-bs-title="my cv" data-bs-placement="left"
             target="_blank" data-bs-toggle="tooltip">
-            <i class="fa-duotone fa-file-user fa-beat icon" style="color: #00ff00 !important;"></i>
+            <i class="fa-duotone fa-file-user fa-beat icon" style="color: #00ff00 !important; --fa-animation-duration: 2s;"></i>
         </a>
         <a href="https://t.me/sajjad_aemmi" class="btn popoverData" data-bs-title="message me" data-bs-placement="left"
             target="_blank" data-bs-toggle="tooltip">
@@ -64,29 +66,8 @@
             <i class="fa-brands fa-pinterest icon"></i>
         </a>
     </div>
-    <div id="content_name">Sajjad Aemmi</div>
-    <div id="content_description">
-        Machine Learning Engineer at <a href="https://parstechai.ir" target="_blank">ParsTech</a>
-        <br>
-        <small>
-            Master of AI at <a href="https://www.um.ac.ir" target="_blank">Ferdowsi University of Mashhad</a>
-            <br>
-            Programming Teacher - Web Developer - Graphist
-            <br>
-            <i class="fa-brands fa-python fa-fw"></i>
-            <i class="fa-solid fa-c fa-fw"></i>
-            <i class="fa-brands fa-html5 fa-fw"></i>
-            <i class="fa-brands fa-css3 fa-fw"></i>
-            <i class="fa-brands fa-js fa-fw"></i>
-            <i class="fa-brands fa-php fa-fw"></i>
-            <i class="fa-brands fa-laravel fa-fw"></i>
-            <i class="fa-brands fa-linux fa-fw"></i>
-            <i class="fa-brands fa-ubuntu fa-fw"></i>
-            <i class="fa-brands fa-raspberry-pi fa-fw"></i>
-            <i class="fa-brands fa-docker fa-fw"></i>
-            <i class="fa-brands fa-unity fa-fw"></i>
-        </small>
-    </div>
+    
+    <div id="content_description"></div>
 </div>
 
 <div id="metadata" itemscope itemtype="http://schema.org/Person">

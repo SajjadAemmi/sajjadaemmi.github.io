@@ -1,7 +1,8 @@
 {% extends 'admin/template.html' %}
 
-{% block dashboard_content %}
+{% block dashboard_title %} Dashboard {% endblock %}
 
+{% block dashboard_content %}
 <form method="post" action="/login">
     <div class="form-floating mb-3">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
@@ -19,5 +20,4 @@
         <button type="submit" class="btn btn-success">Login</button>
     </div>
 </form>
-
 {% endblock %}

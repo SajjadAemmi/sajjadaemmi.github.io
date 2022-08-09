@@ -1,19 +1,17 @@
 {% extends 'admin/template.html' %}
 
+{% block dashboard_title %} Edit Post {% endblock %}
+
 {% block dashboard_content %}
-
 <h2>Edit Post</h2>
-
 <form method="post" action="/admin/blog/edit/{{ post.id }}" enctype="multipart/form-data">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingInput" placeholder="Title" name="title" value="{{ post.title }}">
         <label for="floatingInput">Title</label>
     </div>
     <textarea id="editor" name="body">{{ post.body }}</textarea>
- 
     <div class="d-grid gap-2 mt-3">
         <button type="submit" class="btn btn-success">Save</button>
     </div>
 </form>
-
 {% endblock %}

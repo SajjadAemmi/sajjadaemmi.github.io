@@ -32,3 +32,49 @@ ClassicEditor
     .catch(error => {
     //console.error(error);
 });
+
+
+// https://www.typeitjs.com
+
+$('#content_description').typeIt({
+    speed: 30,
+    autoStart: false
+})
+.tiType('Hll')
+.tiPause(500)
+.tiDelete(2)
+.tiType('ello! ')
+.tiPause(1000)
+.tiType("This is <b id='content_name'>Sajjad Aemmi</b>'s playground.<br>")
+.tiBreak() 
+.tiPause(750)
+.tiType('I\'m a Machine Learning Engineer in p')
+.tiPause(500)
+.tiDelete(4)
+.tiType("at <b><a href='https://parstechai.ir' target='_blank'>ParsTech</a></b>.")
+.tiBreak() 
+.tiPause(750)
+.tiSettings({speed: 60})
+.tiType("I\'m Master of AI from <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
+.tiBreak()
+.tiType('I have a brain for <b>Programming</b> and i teach it.')
+.tiBreak() 
+.tiPause(750)
+.tiType("Oh, I\'m also a <b>Web Developer</b> and <b>Graphist</b>.")
+.tiBreak().tiBreak()
+.tiPause(750)
+.tiSettings({speed: 20})
+.tiType(`
+    <i class='fa-brands fa-python fa-fw'></i>
+    <i class='fa-solid fa-c fa-fw'></i>
+    <i class='fa-brands fa-html5 fa-fw'></i>
+    <i class='fa-brands fa-css3 fa-fw'></i>
+    <i class='fa-brands fa-js fa-fw'></i>
+    <i class='fa-brands fa-php fa-fw'></i>
+    <i class='fa-brands fa-laravel fa-fw'></i>
+    <i class='fa-brands fa-linux fa-fw'></i>
+    <i class='fa-brands fa-ubuntu fa-fw'></i>
+    <i class='fa-brands fa-raspberry-pi fa-fw'></i>
+    <i class='fa-brands fa-docker fa-fw'></i>
+    <i class='fa-brands fa-unity fa-fw'></i>
+    `);

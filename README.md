@@ -1,11 +1,19 @@
-# sajjadaemmi.ir
+# SajjadAemmi.ir
 
 A simple personal website powered by flask in python
 
 
 ## Run
 
-Just run this command
+You can visit my website with url [SajjadAemmi.ir](http://sajjadaemmi.ir) 
+
+If you want to run it's source code, Just execute command bellow:
 ```
-flask run
+flask --debug run
 ```
+
+## TODO
+- [x] favicon
+- [x] titles
+- [ ] comments
+- [ ] projects

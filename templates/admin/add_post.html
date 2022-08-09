@@ -1,9 +1,9 @@
 {% extends 'admin/template.html' %}
 
+{% block dashboard_title %} New Post {% endblock %}
+
 {% block dashboard_content %}
-
 <h2>New Post</h2>
-
 <form method="post" action="/admin/blog/add" enctype="multipart/form-data">
     <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingInput" placeholder="Title" name="title">
@@ -18,5 +18,4 @@
         <button type="submit" class="btn btn-success">Save</button>
     </div>
 </form>
-
 {% endblock %}
