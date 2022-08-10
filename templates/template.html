@@ -18,7 +18,7 @@
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="{{ self.title() }} | Sajjad Aemmi"/>
-    <meta property="og:url" content="{{ url_for(request.endpoint) }}"/>
+    <meta property="og:url" content="{{ request.base_url }}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Sajjad Aemmi"/>
     <meta property="og:description" content="Sajjad Aemmi, Machine Learning Engineer at ParsTech"/>
@@ -77,7 +77,6 @@
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/typed.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

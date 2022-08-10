@@ -1,5 +1,11 @@
+@font-face {
+    font-family: product-sans;
+    src: url("../fonts/product-sans/Product Sans Regular.ttf");
+}
+
 body {
     height: 100%;
+    font-family: product-sans;
     /* overflow: hidden; */
 }
 
