@@ -150,6 +150,10 @@ body {
     background-color: #f50;
 }
 
+.fa-python:hover {
+    background-color: #0073b7;
+}
+
 #circle a, #circle a:hover {
     text-decoration: none;
 }
