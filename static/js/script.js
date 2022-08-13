@@ -64,8 +64,8 @@ $('#content_description').typeIt({
 .tiPause(750)
 .tiSettings({speed: 20})
 .tiType(`
-    <i class='fa-brands fa-python fa-fw'></i>
-    <i class='fa-solid fa-c fa-fw'></i>
+    <i class='fa-brands fa-docker fa-fw'></i>
+    <i class='fa-brands fa-unity fa-fw'></i>
     <i class='fa-brands fa-html5 fa-fw'></i>
     <i class='fa-brands fa-css3 fa-fw'></i>
     <i class='fa-brands fa-js fa-fw'></i>
@@ -74,6 +74,6 @@ $('#content_description').typeIt({
     <i class='fa-brands fa-linux fa-fw'></i>
     <i class='fa-brands fa-ubuntu fa-fw'></i>
     <i class='fa-brands fa-raspberry-pi fa-fw'></i>
-    <i class='fa-brands fa-docker fa-fw'></i>
-    <i class='fa-brands fa-unity fa-fw'></i>
+    <i class='fa-brands fa-python fa-fw'></i>
+    <i class='fa-solid fa-c fa-fw'></i>
     `);

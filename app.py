@@ -9,7 +9,7 @@ import config
 
 app = Flask(__name__)
 app.secret_key = 'super secret string' 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = config.database_url
 app.config['UPLOAD_FOLDER'] = config.upload_folder
 
 db = SQLAlchemy(app)
@@ -152,6 +152,15 @@ def admin_blog_edit(post_id):
         body = request.form['body']
         body = body.replace("'","''")
         db.session.execute(f"UPDATE posts SET title='{title}', body='{body}' WHERE id={post_id}")
+        db.session.commit()
+        return redirect("/admin/blog")
+
+
+@app.route('/admin/blog/remove/<post_id>')
+@login_required
+def admin_blog_remove(post_id):
+    if request.method == 'GET':
+        db.session.execute(f"DELETE FROM posts WHERE id={post_id}")
         db.session.commit()
         return redirect("/admin/blog")
 

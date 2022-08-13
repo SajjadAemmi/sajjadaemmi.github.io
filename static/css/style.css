@@ -58,3 +58,13 @@ body {
     text-align: justify;
     text-justify: inter-word;
 }
+
+nav{
+    position: absolute;
+    top: 45px !important;
+    right: 0px !important;
+}
+nav a{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}

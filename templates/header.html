@@ -7,4 +7,12 @@
             and lots of <i class="fa-duotone fa-coffee"></i>
         </small>
     </p>
+
+    {% if request.path != "/" %}
+    <nav>
+        <a href="/" class="btn btn-light opacity-50">
+            <i class="fa-solid fa-brightness-low"></i> Home
+        </a>
+    </nav>
+    {% endif %}
 </header>
