@@ -78,7 +78,7 @@ body {
     border:none;
 }
 
-#circle .fa, #circle .icon{
+#circle .icon{
     font-size: 2em;
     width: 2em;
     height: 2em;
@@ -86,7 +86,7 @@ body {
     padding: 0.5em;
 }
 
-#circle .fa:hover, #circle .icon:hover{
+#circle .icon:hover{
     color:#fff;
     text-shadow: #c0c0c0 0px 0px 5px;
     border-radius: 100px;
@@ -102,7 +102,7 @@ body {
     background-color: #080808;
 }
 
-.fa-twitter:hover {
+.fa-chalkboard-user:hover {
     background-color: #00acee;
 }
 
