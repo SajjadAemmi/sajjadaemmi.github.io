@@ -38,7 +38,7 @@ ClassicEditor
 
 $('#content_description').typeIt({
     speed: 30,
-    autoStart: false
+    autoStart: true
 })
 .tiType('Hll')
 .tiPause(500)
