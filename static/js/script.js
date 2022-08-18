@@ -53,18 +53,16 @@ $('#content_description').typeIt({
 .tiPause(750)
 .tiType("And Master of AI at <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
 .tiBreak()
-.tiType('I have a brain for <b>Programming</b> and i teach it')
+.tiType('I have a brain to <b>Programming</b> and I teach it')
 .tiBreak() 
 .tiPause(750)
-.tiType("Oh, I\'m also a <b>Web Developer</b> and <b>Graphist</b>")
+.tiType("Oh, I\'m also a Web Developer and Graphist")
 .tiBreak().tiBreak()
 .tiPause(750)
 .tiSettings({speed: 20})
 .tiType(`
     <i class='fa-brands fa-docker fa-fw'></i>
     <i class='fa-brands fa-unity fa-fw'></i>
-    <i class='fa-brands fa-html5 fa-fw'></i>
-    <i class='fa-brands fa-css3 fa-fw'></i>
     <i class='fa-brands fa-js fa-fw'></i>
     <i class='fa-brands fa-php fa-fw'></i>
     <i class='fa-brands fa-laravel fa-fw'></i>
