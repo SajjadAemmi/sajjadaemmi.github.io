@@ -5,7 +5,7 @@ A simple personal website powered by flask in python
 
 ## Run
 
-You can visit my website with url [SajjadAemmi.ir](http://sajjadaemmi.ir) 
+You can visit my website with url [SajjadAemmi.ir](https://sajjadaemmi.ir) 
 
 If you want to run it from source code, install requirements
 ```
