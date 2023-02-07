@@ -2,13 +2,14 @@ import os
 from datetime import datetime
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql import text
 from flask_bcrypt import Bcrypt
 from flask_login import UserMixin, LoginManager, login_required, current_user, login_user, logout_user
 import config
 
 
 app = Flask(__name__)
-app.secret_key = 'super secret string' 
+# app.secret_key = 'super secret string'
 app.config['SQLALCHEMY_DATABASE_URI'] = config.database_url
 app.config['UPLOAD_FOLDER'] = config.upload_folder
 
@@ -70,13 +71,13 @@ def me_api():
 
 @app.route('/blog')
 def blog():
-    posts = db.session.execute(f"SELECT * FROM posts ORDER BY create_time DESC").mappings().all()
+    posts = db.session.execute(text(f"SELECT * FROM posts ORDER BY create_time DESC")).mappings().all()
     return render_template('blog.html', posts=posts)
 
 
 @app.route('/blog/<post_id>')
 def blog_post(post_id):
-    post = db.session.execute(f"SELECT * FROM posts WHERE id={post_id}").fetchone()
+    post = db.session.execute(text(f"SELECT * FROM posts WHERE id={post_id}")).fetchone()
     return render_template('blog_post.html', post=post)
 
 
@@ -88,7 +89,7 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        result = db.session.execute(f"SELECT * FROM users WHERE email='{email}'").fetchone()
+        result = db.session.execute(text(f"SELECT * FROM users WHERE email='{email}'")).fetchone()
         if result is not None and bcrypt.check_password_hash(result["password"], password):
             user = User()
             user.id = email
@@ -114,7 +115,7 @@ def admin_dashboard():
 @app.route('/admin/blog')
 @login_required
 def admin_blog():
-    posts = db.session.execute(f"SELECT * FROM posts ORDER BY create_time DESC").mappings().all()
+    posts = db.session.execute(text(f"SELECT * FROM posts ORDER BY create_time DESC")).mappings().all()
     return render_template('admin/blog.html', posts=posts)
 
 
@@ -135,7 +136,7 @@ def admin_blog_add():
         title = request.form['title']
         body = request.form['body']
         body = body.replace("'","''")
-        db.session.execute(f"INSERT INTO posts(title, body, image) VALUES('{title}', '{body}', '{image_path}')")
+        db.session.execute(text(f"INSERT INTO posts(title, body, image) VALUES('{title}', '{body}', '{image_path}')"))
         db.session.commit()
         return redirect("/admin/blog")
 
@@ -144,14 +145,14 @@ def admin_blog_add():
 @login_required
 def admin_blog_edit(post_id):
     if request.method == 'GET':
-        post = db.session.execute(f"SELECT * FROM posts WHERE id={post_id}").fetchone()
+        post = db.session.execute(text(f"SELECT * FROM posts WHERE id={post_id}")).fetchone()
         return render_template('admin/edit_post.html', post=post)
     
     if request.method == 'POST':
         title = request.form['title']
         body = request.form['body']
         body = body.replace("'","''")
-        db.session.execute(f"UPDATE posts SET title='{title}', body='{body}' WHERE id={post_id}")
+        db.session.execute(text(f"UPDATE posts SET title='{title}', body='{body}' WHERE id={post_id}"))
         db.session.commit()
         return redirect("/admin/blog")
 
@@ -160,7 +161,7 @@ def admin_blog_edit(post_id):
 @login_required
 def admin_blog_remove(post_id):
     if request.method == 'GET':
-        db.session.execute(f"DELETE FROM posts WHERE id={post_id}")
+        db.session.execute(text(f"DELETE FROM posts WHERE id={post_id}"))
         db.session.commit()
         return redirect("/admin/blog")
 
