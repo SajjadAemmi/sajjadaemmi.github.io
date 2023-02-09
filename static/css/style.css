@@ -1,0 +1,70 @@
+@font-face {
+    font-family: product-sans;
+    src: url("../fonts/product-sans/Product Sans Regular.ttf");
+}
+
+body {
+    height: 100%;
+    font-family: product-sans;
+    /* overflow: hidden; */
+}
+
+.lm-animated-bg {
+    background-image: url("../images/background.jpg");
+    background-position: calc(50% + -4.74846px) calc(50% + -1.5465px);
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: -28px;
+    left: -28px;
+    right: -28px;
+    bottom: -28px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.card-img-overlay {
+    background: linear-gradient(to top, transparent 0%, black 150%);
+}
+
+.hover {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.hover:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.post-body {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+nav{
+    position: absolute;
+    top: 45px !important;
+    right: 0px !important;
+}
+nav a{
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}

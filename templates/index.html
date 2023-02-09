@@ -1,0 +1,81 @@
+{% extends 'template.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+<div id="content">
+    <div id="circle">
+         <img loading="lazy" src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Sajjad Aemmi" id="avatar">
+        <noscript><br /></noscript>
+        <a href="/blog" class="btn popoverData" data-bs-title="my blog" data-bs-placement="left" target="_self"
+            data-bs-toggle="tooltip">
+            <i class="fa-duotone fa-blog icon"></i>
+        </a>
+        <a href="https://resume.io/r/OAD7FPexF" class="btn popoverData" data-bs-title="my cv" data-bs-placement="left"
+            target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-duotone fa-file-user fa-beat icon" style="color: #00ff00 !important; --fa-animation-duration: 2s;"></i>
+        </a>
+        <a href="https://t.me/sajjad_aemmi" class="btn popoverData" data-bs-title="message me" data-bs-placement="left"
+            target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-telegram icon"></i>
+        </a>
+        <a href="tel:+989150471487" class="btn popoverData" data-bs-title="call me" data-bs-placement="right"
+            target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-duotone fa-phone icon"></i>
+        </a>
+        <a href="https://github.com/sajjadaemmi" class="btn popoverData" data-bs-title="my codes"
+            data-bs-placement="right" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-github icon"></i>
+        </a>
+        <a href="mailto:sajjadaemmi@gmail.com" class="btn popoverData" data-bs-title="email me"
+            data-bs-placement="right" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-duotone fa-envelope icon"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sajjadaemmi" class="btn popoverData" data-bs-title="my academic network"
+            data-bs-placement="right" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-linkedin icon"></i>
+        </a>
+        <a href="https://soundcloud.com/sajjad-aemmi" class="btn popoverData" data-bs-title="my musics"
+            data-bs-placement="right" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-duotone fa-music icon"></i>
+        </a>
+        <a href="https://pypi.org/user/sajjadaemmi" class="btn popoverData" data-bs-title="my python packages"
+            data-bs-placement="right" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-python icon"></i>
+        </a>
+        <!-- <a href="https://apps.apple.com/developer/sajjadaemmi" class="btn popoverData" data-bs-title="my apps"
+            data-bs-placement="right" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-app-store icon"></i>
+        </a> -->
+        <a href="https://www.youtube.com/channel/UCY8lTmKPDd2eNzR6uRYpoaA" class="btn popoverData"
+            data-bs-title="my videos" data-bs-placement="left" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-youtube icon"></i>
+        </a>
+        <a href="https://stackoverflow.com/users/9328993/sajjad-aemmi" class="btn popoverData"
+            data-bs-title="my questions and answers" data-bs-placement="left" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-stack-overflow icon"></i>
+        </a>
+        <a href="https://www.pinterest.com/sajjadaemmi/logo" class="btn popoverData" data-bs-title="my logos"
+            data-bs-placement="left" target="_blank" data-bs-toggle="tooltip">
+            <i class="fa-brands fa-pinterest icon"></i>
+        </a>
+    </div>
+    
+    <div id="content_description"></div>
+</div>
+
+<div id="metadata" itemscope itemtype="http://schema.org/Person">
+    <span itemprop="name">Sajjad Aemmi</span>
+    <span itemprop="jobTitle">Machine Learning Engineer</span>
+    <span itemprop="email">sajjadaemmi@gmail.com</span>
+    <span itemprop="gender">male</span>
+    <span itemprop="familyName">Aemmi</span>
+    <span itemprop="givenName">Sajjad</span>
+    <span itemprop="honorificPrefix">Msc.</span>
+
+    <a href="https://sajjadaemmi.ir" itemprop="url">website</a>
+    <a href="https://sajjadaemmi.ir/resources/images/avatar.jpg" itemprop="image">photo</a>
+</div>
+
+{% endblock %}

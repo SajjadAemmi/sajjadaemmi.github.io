@@ -1,0 +1,13 @@
+{% include "header.html" %}
+
+<div class="container">
+
+    {% if name %}
+    <h1>Hello {{ name }}!</h1>
+    {% else %}
+    <h1>Hello, Template!</h1>
+    {% endif %}
+
+</div>
+
+{% include "footer.html" %}

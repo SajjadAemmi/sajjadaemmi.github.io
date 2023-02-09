@@ -1,0 +1,29 @@
+{% extends 'template.html' %}
+
+{% block title %} {{ post.title }} {% endblock %}
+
+{% block content %}
+<div class="container px-4">
+    <div class="row">
+        <h2 class="text-white mb-4">
+            <i class="fa-duotone fa-blog fa-fw"></i>
+            Blog
+        </h2>
+        <div class="col-lg-3 col-12 mb-4">
+             <img loading="lazy" src="{{ post.image }}" class="card-img rounded rounded-4" alt="{{ post.title }}">
+        </div>
+        <div class="col-lg-9 col-12 mb-4">
+            <div class="card border-0 shadow bg-body rounded rounded-4">
+                <div class="card-body">
+                    <h3 class="card-title">{{ post.title }}</h3>
+                    <p class="card-text">{{ post.time }}</p>
+                    <hr>
+                    <p class="card-text post-body">
+                        {{ post.body | safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

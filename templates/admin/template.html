@@ -1,0 +1,20 @@
+{% extends 'template.html' %}
+
+{% block title %} {% block dashboard_title %} {% endblock %} | Admin {% endblock %}
+
+{% block content %}
+<div class="container px-4">
+    <div class="row">
+        <div class="col-lg-3 col-12 mb-4">
+            {% include "admin/sidebar.html" %}
+        </div>
+        <div class="col-lg-9 col-12">
+            <div class="card border border-0 shadow p-3 bg-body rounded">
+                <div class="card-body">
+                    {% block dashboard_content %} {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

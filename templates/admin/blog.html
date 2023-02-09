@@ -1,0 +1,35 @@
+{% extends 'admin/template.html' %}
+
+{% block dashboard_title %} Blog {% endblock %}
+
+{% block dashboard_content %}
+<a href="/admin/blog/add" class="btn btn-success rounded-circle float-end">
+    <i class="fa-solid fa-plus"></i>
+</a>
+<h2>Blog</h2>
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Time</th>
+        <th></th>
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body | truncate(64, True) | safe }}</td>
+        <td>{{ post.create_time }}</td>
+        <td>
+            <a href="/admin/blog/edit/{{ post.id }}" class="btn btn-info btn-sm rounded-circle">
+                <i class="fa-duotone fa-pen"></i>
+            </a>
+            <a href="/admin/blog/remove/{{ post.id }}" class="btn btn-danger btn-sm rounded-circle">
+                <i class="fa-duotone fa-trash"></i>
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

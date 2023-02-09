@@ -1,0 +1,18 @@
+<header class="align-items-center mb-4 text-light opacity-75">
+    <p dir="ltr" class="text-center mb-1">
+        <small>
+            &copy; Sajjad Aemmi {{ now.year }} | 
+            Made with <i class="fa-brands fa-python"></i> , 
+            <i class="fa-duotone fa-heart"></i> 
+            and lots of <i class="fa-duotone fa-coffee"></i>
+        </small>
+    </p>
+
+    {% if request.path != "/" %}
+    <nav>
+        <a href="/" class="btn btn-light opacity-50">
+            <i class="fa-solid fa-brightness-low"></i> Home
+        </a>
+    </nav>
+    {% endif %}
+</header>
