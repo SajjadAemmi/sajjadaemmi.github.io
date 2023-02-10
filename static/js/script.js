@@ -50,7 +50,7 @@ $('#content_description').typeIt({
 .tiType('I\'m a Machine Learning Engineer in p')
 .tiPause(500)
 .tiDelete(4)
-.tiType("at <b><a href='https://parstechai.ir' target='_blank'>ParsTech</a></b>")
+.tiType("at <b><a href='https://parstechai.ir' target='_blank'>ParsTech AI</a></b>")
 .tiBreak() 
 .tiPause(750)
 .tiType("And Master of AI at <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
