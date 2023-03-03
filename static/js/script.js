@@ -29,36 +29,36 @@ $(document).ready(function () {
     distributeFields();
 });
 
-ClassicEditor
-    .create(document.querySelector('#editor'))
-    .catch(error => {
-    //console.error(error);
-});
+// ClassicEditor
+//     .create(document.querySelector('#editor'))
+//     .catch(error => {
+//     console.error(error);
+// });
 
 
 // https://www.typeitjs.com
 
 $('#content_description').typeIt({
     speed: 30,
-    autoStart: true
+    autoStart: true,
+    waitUntilVisible: true
 })
-.tiType('Hi! ')
+.tiType('Hello! ')
 .tiPause(1000)
-.tiType("It's <b id='content_name'>Sajjad Aemmi</b>'s playground<br>")
+.tiType("It is <b id='content_name'>Sajjad Aemmi</b>'s playground<br>")
 .tiBreak() 
 .tiPause(750)
-.tiType('I\'m a Machine Learning Engineer in p')
+.tiType('Deep Learning Engineering Lead in p')
 .tiPause(500)
 .tiDelete(4)
-.tiType("at <b><a href='https://parstechai.ir' target='_blank'>ParsTech AI</a></b>")
+.tiType("at <a href='https://parstechai.ir' target='_blank'>ParsTech.AI</a>")
 .tiBreak() 
 .tiPause(750)
-.tiType("And Master of AI at <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
+.tiType("Master of AI at <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
 .tiBreak()
-.tiType('I have a brain to <b>Programming</b> and I teach it')
-.tiBreak() 
+.tiType("Programmer, Teacher")
 .tiPause(750)
-.tiType("Oh, I\'m also a Web Developer and Graphist")
+.tiType(", Web Developer, Graphist")
 .tiBreak().tiBreak()
 .tiPause(750)
 .tiSettings({speed: 20})

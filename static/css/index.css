@@ -44,13 +44,14 @@ body {
 }
 
 #content_name {
-    font-size: 32px;
+    font-size: 33px;
 }
 
 #content_description {
-    padding-top: 4em;
+    padding-top: 6em;
     font-size: 1.2em;
     color: #fff;
+    /* text-align: justify; */
     /* text-shadow: 1px 1px 4px #080808; */
 }
 
