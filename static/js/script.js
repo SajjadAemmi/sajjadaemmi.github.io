@@ -70,5 +70,4 @@ $('#content_description').typeIt({
     <i class='fa-brands fa-ubuntu fa-fw'></i>
     <i class='fa-brands fa-raspberry-pi fa-fw'></i>
     <i class='fa-brands fa-python fa-fw'></i>
-    <i class='fa-solid fa-c fa-fw'></i>
     `);
