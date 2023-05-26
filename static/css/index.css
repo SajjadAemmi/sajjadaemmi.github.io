@@ -44,7 +44,7 @@ body {
 }
 
 #content_name {
-    font-size: 33px;
+    font-size: 24px;
 }
 
 #content_description {
@@ -100,7 +100,7 @@ body {
 }
 
 .fa-file-user:hover {
-    background-color: #080808;
+    background-color: teal;
 }
 
 .fa-chalkboard-user:hover {
@@ -109,6 +109,10 @@ body {
 
 .fa-github:hover {
     background-color: #171515;
+}
+
+.fa-cup-togo:hover {
+    background-color: #fd0;
 }
 
 .fa-linkedin:hover {
