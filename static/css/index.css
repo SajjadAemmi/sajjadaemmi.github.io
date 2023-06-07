@@ -107,7 +107,7 @@ body {
     background-color: #00acee;
 }
 
-.fa-github:hover {
+.fa-github:hover, .fa-medium:hover {
     background-color: #171515;
 }
 
