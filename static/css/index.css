@@ -47,7 +47,7 @@ body {
     font-size: 24px;
 }
 
-#content_description {
+#content_description, #content_description_404 {
     padding-top: 6em;
     font-size: 1.2em;
     color: #fff;

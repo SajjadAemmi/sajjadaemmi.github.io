@@ -71,3 +71,16 @@ $('#content_description').typeIt({
     <i class='fa-brands fa-python fa-fw'></i>
     <i class="fa-brands fa-golang"></i>
     `);
+
+$('#content_description_404').typeIt({
+        speed: 40,
+        autoStart: true,
+        waitUntilVisible: true
+    })
+    .tiType('ERROR')
+    .tiBreak()
+    .tiPause(1000)
+    .tiType("<b id='content_name'>404</b>")
+    .tiBreak()
+    .tiType("This page is outside of the universe");
+    
