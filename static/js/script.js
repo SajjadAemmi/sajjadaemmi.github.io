@@ -52,7 +52,7 @@ $('#content_description').typeIt({
 .tiType('Machine Learning Engineer at parste')
 .tiPause(500)
 .tiDelete(6)
-.tiType("<a href='https://parstechai.ir' target='_blank'>ParsTechAI</a>")
+.tiType("<a href='https://parstechai.com/' target='_blank'>ParsTechAI</a>")
 .tiBreak() 
 .tiPause(750)
 .tiType("Master of AI at <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
