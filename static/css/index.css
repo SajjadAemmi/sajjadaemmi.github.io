@@ -159,6 +159,10 @@ body {
     background-color: #0073b7;
 }
 
+.fa-paintbrush-pencil:hover {
+    background-color: teal;
+}
+
 #circle a, #circle a:hover {
     text-decoration: none;
 }

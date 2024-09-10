@@ -1,0 +1,202 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section-padding {
+        padding: 35px 0;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+        /* letter-spacing: 5px; */
+    }
+
+    .nav>li>a {
+        padding: 10px 5px;
+    }
+
+    .sticky_navigation .nav li.active a {
+        color: #262626;
+    }
+
+    .sticky_navigation .navbar-brand {
+        line-height: 45px;
+    }
+
+    .socials {
+        padding-top: 3%;
+    }
+
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+    .section-padding {
+        padding: 30px 0;
+    }
+
+    .section-header {
+        margin-top: 15px;
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none;
+        background: none;
+        color: #ffffff;
+    }
+
+    .sticky_navigation .nav li.active::after {
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .navbar-fixed-top .navbar-collapse {
+        height: 740px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-fixed-top .navbar-collapse {
+        max-height: 100%;
+    }
+
+    .navbar-collapse li {
+        margin: 4px;
+    }
+
+    .welcome-text h2 {
+        font-size: 2em;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .welcome-text h1.ah-headline {
+        font-size: 30px;
+    }
+
+    .welcome-text h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .about-text-left {
+        margin-top: 20px;
+    }
+
+    .about-text-left h2 {
+        text-align: center;
+    }
+
+    .about-text-left h3 {
+        text-align: center;
+    }
+
+    .about-text-left p {
+        text-align: center;
+    }
+
+    .about-text-left a {
+        display: block;
+        text-align: center;
+        float: none;
+    }
+
+    .about-text-right {
+        margin-top: 40px;
+    }
+
+    .services-area .section-header {
+        margin-bottom: 0;
+    }
+
+    .about-text-left a {
+        display: inline-block;
+    }
+
+    .social-area {
+        text-align: center;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        /* letter-spacing: 2px; */
+    }
+
+    ul.port-nav-list li {
+        margin-bottom: 15px;
+    }
+
+    .service {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+
+    .single-contact {
+        margin-bottom: 30px;
+    }
+
+    #contact-form {
+        margin-top: 20px;
+    }
+
+    .contact-area .form-control {
+        font-size: 11px;
+    }
+
+    .contact-area {
+        background-position: inherit;
+    }
+
+    .brand-logo-img {
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+
+
+}
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .contact-area {
+        background-position: inherit;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+    .portfolio-area .list-inline>li {
+        padding-right: 0;
+    }
+
+    .portfolio-area ul.list-inline li {
+        margin: 7px;
+    }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 767px) {
+    .carousel-caption h1 {
+        font-size: 33px;
+    }
+
+    .timeline-area {
+        width: 380px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+    .welcome-text h1.ah-headline {
+        font-size: 40px;
+    }
+
+    .welcome-text h3 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+}
