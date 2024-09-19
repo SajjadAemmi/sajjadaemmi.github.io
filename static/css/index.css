@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Child Hood Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Child Hood Regular'), url('../fonts/Child Hood.woff') format('woff');
+}
+
 body {
     /* height: 100%; */
     text-align: center;
@@ -5,9 +12,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
 }
+
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
@@ -25,12 +35,12 @@ body {
 }
 
 #content {
-    width:500px;
-    height:300px;
-    position:absolute;
-    left:50%;
-    top:35%;
-    margin:-150px 0 0 -250px;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin: -150px 0 0 -250px;
 }
 
 #content img {
@@ -47,7 +57,8 @@ body {
     font-size: 24px;
 }
 
-#content_description, #content_description_404 {
+#content_description,
+#content_description_404 {
     padding-top: 6em;
     font-size: 1.2em;
     color: #fff;
@@ -74,21 +85,21 @@ body {
 * ICONS *
 \*******/
 
-.btn {
+.popoverData {
     position: absolute;
-    border:none;
+    border: none;
 }
 
-#circle .icon{
+#circle .icon {
     font-size: 2em;
     width: 2em;
     height: 2em;
-    color:#fff;
+    color: #fff;
     padding: 0.5em;
 }
 
-#circle .icon:hover{
-    color:#fff;
+#circle .icon:hover {
+    color: #fff;
     text-shadow: #c0c0c0 0px 0px 5px;
     border-radius: 100px;
     -moz-border-radius: 100px;
@@ -107,7 +118,8 @@ body {
     background-color: #00acee;
 }
 
-.fa-github:hover, .fa-medium:hover {
+.fa-github:hover,
+.fa-medium:hover {
     background-color: #171515;
 }
 
@@ -163,9 +175,39 @@ body {
     background-color: teal;
 }
 
-#circle a, #circle a:hover {
+#circle a,
+#circle a:hover {
     text-decoration: none;
 }
 
-.popover-title { display: none; }
-.popover-content { padding-top: 1em; white-space: nowrap; }
+.popover-title {
+    display: none;
+}
+
+.popover-content {
+    padding-top: 1em;
+    white-space: nowrap;
+}
+
+.programming {
+    font-family: "Cascadia Code" !important;
+    /* font-size: 24px; */
+}
+
+.graphic-design {
+    font-family: "Child Hood Regular" !important;
+    /* font-size: 24px; */
+    background: linear-gradient(90deg,
+            rgba(228, 0, 43, 1),
+            rgba(255, 105, 0, 1),
+            rgba(246, 190, 0, 1),
+            rgba(151, 215, 0, 1),
+            rgba(0, 171, 132, 1),
+            rgba(0, 163, 224, 1),
+            rgba(84, 97, 200, 1),
+            rgba(199, 36, 177, 1));
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

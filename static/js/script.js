@@ -5,8 +5,8 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 $(document).ready(function () { 
     const radius = ($('#avatar').height() / 2) + 50;
-    let step = (2 * Math.PI) / $('.btn').length, angle = 90 + step * 2.5;
-    $('.btn').each(function () {
+    let step = (2 * Math.PI) / $('.popoverData').length, angle = 90 + step * 2.5;
+    $('.popoverData').each(function () {
         const x = Math.round($('#circle').width() / 2 + radius * Math.cos(angle) - $(this).width() / 2);
         const y = Math.round($('#circle').height() / 2 + radius * Math.sin(angle) - $(this).height() / 2);
         $(this).css({left: x + 'px', top: y + 'px'});
@@ -35,43 +35,29 @@ $(document).ready(function () {
 
 // https://www.typeitjs.com
 
-$('#content_description').typeIt({
-    speed: 40,
-    autoStart: true,
-    waitUntilVisible: true
-})
-.tiType('Hi! ')
-.tiPause(1000)
-.tiType("I am <b>Sajjad Aemmi</b>")
-.tiBreak()
-.tiType("Graphic Designer, Teacher")
-.tiBreak() 
-.tiPause(750)
-.tiType("AI Programmer,  Web Developer")
-.tiBreak() 
-.tiPause(750)
-.tiType('Machine Learning Engineer at parste')
-.tiPause(500)
-.tiDelete(6)
-.tiType("<a href='https://parstechai.com/' target='_blank'>ParsTechAI</a>")
-.tiBreak() 
-.tiPause(750)
-.tiType("Master of AI at <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
-.tiBreak().tiBreak()
-.tiPause(750)
-.tiSettings({speed: 20})
-.tiType(`
-    <i class='fa-brands fa-docker fa-fw'></i>
-    <i class='fa-brands fa-unity fa-fw'></i>
-    <i class='fa-brands fa-js fa-fw'></i>
-    <i class='fa-brands fa-php fa-fw'></i>
-    <i class='fa-brands fa-laravel fa-fw'></i>
-    <i class='fa-brands fa-linux fa-fw'></i>
-    <i class='fa-brands fa-ubuntu fa-fw'></i>
-    <i class='fa-brands fa-raspberry-pi fa-fw'></i>
-    <i class='fa-brands fa-python fa-fw'></i>
-    <i class="fa-brands fa-golang"></i>
-    `);
+// $('#content_description').typeIt({
+//     speed: 40,
+//     autoStart: true,
+//     waitUntilVisible: true
+// })
+// .tiType('Hi! ')
+// .tiPause(1000)
+// .tiType("I am <b>Sajjad Aemmi</b>")
+// .tiBreak()
+// .tiType("Graphic Designer, Teacher")
+// .tiBreak() 
+// .tiPause(750)
+// .tiType("AI Programmer,  Web Developer")
+// .tiBreak() 
+// .tiPause(750)
+// .tiType('Machine Learning Engineer at parste')
+// .tiPause(500)
+// .tiDelete(6)
+// .tiType("<a href='https://parstechai.com/' target='_blank'>ParsTechAI</a>")
+// .tiBreak() 
+// .tiPause(750)
+// .tiType("Master of AI at <a href='https://www.um.ac.ir' target='_blank'>Ferdowsi University of Mashhad</a>")
+// .tiBreak().tiBreak();
 
 $('#content_description_404').typeIt({
         speed: 40,

@@ -7,7 +7,13 @@
         <priority>1</priority>
     </url>
     <url>
-        <loc>https://sajjadaemmi.ir/portfolio.html</loc>
+        <loc>https://sajjadaemmi.ir/portfolio/graphic-design.html</loc>
+        <lastmod>2024-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://sajjadaemmi.ir/portfolio/programming.html</loc>
         <lastmod>2024-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
