@@ -190,13 +190,14 @@ body {
 }
 
 .programming {
-    font-family: "Cascadia Code" !important;
+    /* font-family: "Cascadia Code" !important; */
     /* font-size: 24px; */
 }
 
 .graphic-design {
-    font-family: "Child Hood Regular" !important;
+    /* font-family: "Child Hood Regular" !important; */
     /* font-size: 24px; */
+    font-weight: bold;
     background: linear-gradient(90deg,
             rgba(228, 0, 43, 1),
             rgba(255, 105, 0, 1),
