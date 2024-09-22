@@ -1141,6 +1141,8 @@ ul.port-nav-list li a.active {
 .graphic-design {
     font-family: "Child Hood Regular" !important;
     font-size: 42px;
+    line-height: 1;
+    padding-bottom: 20px;
     background: linear-gradient(
         90deg, 
         rgba(228, 0, 43, 1),      
