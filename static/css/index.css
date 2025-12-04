@@ -131,6 +131,10 @@ body {
     background-color: #0e76a8;
 }
 
+.fa-goodreads:hover {
+    background-color: #EFBF6D   ;
+}
+
 .fa-youtube:hover {
     background-color: #fe0000;
 }
